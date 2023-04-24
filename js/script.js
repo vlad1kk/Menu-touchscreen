@@ -17,7 +17,9 @@ if(isMobile.any()){
 
         thisLink.classList.add('parent');
         arrow[i].addEventListener('click', function(){
-            subMenu.classList.add('parent');
+            subMenu.classList.toggle('open');
+            thisArrow.classList.toggle('active');
+
         })
     }
 } else{

@@ -20,6 +20,10 @@ html, body{
 .menu a{
   text-decoration: none;
 }
+.menu a.parent{
+  margin: 0px 30px 0px 0px;
+}
+
 .menu li{
   list-style: none;
   position: relative;
@@ -28,11 +32,9 @@ html, body{
   display: flex;
 }
 .menu__list>li{
-  margin: 0px 10px 0px 0px;
+  margin: 0px 30px 0px 0px;
 }
-.menu__list>li:hover .sub-menu__list {
-  display: block;
-}
+
 .menu__link {
   color: #fff;
 }
@@ -48,9 +50,7 @@ html, body{
 .sub-menu__list>li {
   background-color: #fff;
 }
-.sub-menu__list>li:hover .sub-sub-menu__list{
-  display: block;
-}
+
 .sub-menu__link {
   color: #000;
   display: inline-block;
@@ -62,7 +62,7 @@ html, body{
   top: 0;
   left: 100%;
   min-width: 300px;
-  padding: 0px 0px 0px 5px;
+  padding: 0px 0px 0px 0px;
 }
 .sub-sub-menu__list>li {
 background-color: #000;
@@ -89,4 +89,10 @@ background-color: #000;
   border-left: 10px solid transparent;
 }
 .menu__arrow {
+}
+body.mouse .menu__list>li:hover .sub-menu__list {
+  display: block;
+}
+body.mouse .sub-menu__list>li:hover .sub-sub-menu__list{
+  display: block;
 }
